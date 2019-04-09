@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # installed apps
     'django_filters',
     'rest_framework',
+    'rest_framework.authtoken',
 
     # developed apps
     'core',
