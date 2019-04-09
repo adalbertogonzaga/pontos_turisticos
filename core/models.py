@@ -8,6 +8,7 @@ class PontoTuristico(models.Model):
     nome = models.CharField(max_length=150)
     descricao = models.TextField()
     aprovado = models.BooleanField(default=False)
+    foto = models.ImageField(upload_to='pontos_turisticos', null=True, blank=True)  # requires Pillow package
 
     atracoes = models.ManyToManyField(Atracao)
     comentarios = models.ManyToManyField(Comentario)
