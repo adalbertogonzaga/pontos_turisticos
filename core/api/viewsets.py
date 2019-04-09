@@ -14,6 +14,9 @@ class PontoTuristicoViewSet(ModelViewSet):
     filter_backends = (SearchFilter,)
     search_fields = ('nome', 'descricao', 'endereco__linha1')
 
+    # if we don't want to use the 'id' or 'pk' to retrieve an object...
+    # lookup_field = 'nome'  #  http://127.0.0.1:8000/api/pontosturisticos/<name>/ would work by doing that
+
     def get_queryset(self):
         return PontoTuristico.objects.filter(aprovado=True)
 
